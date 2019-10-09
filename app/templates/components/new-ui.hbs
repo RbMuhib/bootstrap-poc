@@ -15,47 +15,36 @@
                         <table class="table table-hover">
                               <thead>
                                     <tr>
-                                          <th>Firstname</th>
-                                          <th>Lastname</th>
+                                          <th>ID</th>
+                                          <th>Name</th>
+                                          <th>Username</th>
                                           <th>Email</th>
+                                          <th>Address</th>
+                                          <th>Phone</th>
+                                          <th>Website</th>
+                                          <th>Company</th>
+
                                     </tr>
+                                    {{
+                                          log data
+                                    }}
+
+
+                                    {{#each data as |info|}}
+                                    <tr>
+                                          <th>{{info.id}}</th>
+                                          <th>{{info.name}}</th>
+                                          <th>{{info.username}}</th>
+                                          <th>{{info.email}}</th>
+                                          <th>{{info.address.suite}}<br>{{info.address.street}}<br>{{info.address.geo.lat}}</th>
+                                          <th>{{info.phone}}</th>
+                                          <th>{{info.website}}</th>
+                                          <th>{{info.company.name}}<br>{{info.company.catchPhrase}}<br>{{info.company.bs}}</th>
+                                    </tr>
+                                    {{/each}}
                               </thead>
                               <tbody>
-                                    <tr>
-                                          <td>John</td>
-                                          <td>Doe</td>
-                                          <td>john@example.com</td>
-                                    </tr>
-                                    <tr>
-                                          <td>John</td>
-                                          <td>Doe</td>
-                                          <td>john@example.com</td>
-                                    </tr>
-                                    <tr>
-                                          <td>John</td>
-                                          <td>Doe</td>
-                                          <td>john@example.com</td>
-                                    </tr>
-                                    <tr>
-                                          <td>John</td>
-                                          <td>Doe</td>
-                                          <td>john@example.com</td>
-                                    </tr>
-                                    <tr>
-                                          <td>John</td>
-                                          <td>Doe</td>
-                                          <td>john@example.com</td>
-                                    </tr>
-                                    <tr>
-                                          <td>Mary</td>
-                                          <td>Moe</td>
-                                          <td>mary@example.com</td>
-                                    </tr>
-                                    <tr>
-                                          <td>July</td>
-                                          <td>Dooley</td>
-                                          <td>july@example.com</td>
-                                    </tr>
+
                               </tbody>
                         </table>
                   </div>
