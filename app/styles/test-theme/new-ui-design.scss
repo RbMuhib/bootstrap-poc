@@ -4,7 +4,23 @@
     color: #16325c;
 }
 .ui-button{
-    text-align: center;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    background-clip: border-box;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    line-height: 1.875rem;
+    text-decoration: none;
+    color: #0070d2;
+    -webkit-appearance: none;
+    white-space: normal;
+    user-select: none;
+
+}
+.ui-button-2{
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: center;
@@ -12,6 +28,7 @@
     justify-content: center;
     border: 1px solid #dddbda;
     transition: border .15s linear;
-    background-color: #0070d2;
+    border-color: #dddbda;
+    background-color: #fff;
     border-color: #0070d2;
 }
