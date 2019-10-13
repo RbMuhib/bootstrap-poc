@@ -2,7 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
-
+import { visit, fillIn, click } from '@ember/test-helpers';
 module('Integration | Component | new-ui', function(hooks) {
   setupRenderingTest(hooks);
 
@@ -21,7 +21,10 @@ module('Integration | Component | new-ui', function(hooks) {
     assert.equal(this.$('div').hasClass('col-lg-9'), false, 'div empty for form check ');
     assert.equal(this.$('div').hasClass('col-lg-3'), false, 'form check for true false');
     //assert.equal(this.$('div').hasClass('col-lg-9'), true, 'div empty for form check  ');
-
+    //assert.equal(this.$('h2').text(), 'Hello World', 'initial text is hello world');
+    await fillIn('input.text', 'Name');
+    //Click on the button
+    //ert.equal(this.$('h2').text(), 'This is Magic', 'title changes after click');
     // Template block usage:
     await render(hbs`
       {{#new-ui}}
